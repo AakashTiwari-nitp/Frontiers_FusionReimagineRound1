@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: PP Woodland;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+/* #main{
+    height: 100%;
+    width: 100%;
+} */
+#page1{
+    height: 100vh;
+    width: 100%;
+    background-color: aqua;
+}
+
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    background-color: aqua;
+    background-image: url('background.jpg');
+    object-fit: cover;
+    padding: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+#page3{
+    height: 100vh;
+    width: 100%;
+    background-color: aqua;
+}
+
+/* This is the code to give styling to every element of the accesories */
+.elem{
+    height: 30vh;
+    width: 46%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border: 2px solid #ffffff8a;
+    border-radius: 25px;
+    padding: 10px;
+}
+.elem h1{
+    font-size: 2.5rem;
+    color: aliceblue;
+}
+#image{
+    min-width: 30%;
+    width: 30%;
+    height: 90%;
+    position: relative;
+    /* background-color: royalblue; */
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
