@@ -1,3 +1,14 @@
+document.addEventListener("DOMContentLoaded", function() {
+  const preloader = document.querySelector(".preloader");
+  const content = document.querySelector(".content");
+
+  // Hide preloader and show content after 2 seconds
+  setTimeout(function() {
+    preloader.style.display = "none";
+    content.style.display = "block";
+  }, 2000); // Adjust the timeout (in milliseconds) as needed
+});
+
 // This is a function to add locomaotive JS for Scrolling
 
 function locomotive() {

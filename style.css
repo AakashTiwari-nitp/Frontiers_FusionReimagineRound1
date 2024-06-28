@@ -1,3 +1,52 @@
+/* CSS for Preloader */
+.preloader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff; 
+  z-index: 1000; 
+}
+
+.preloader img {
+  max-width: 100px; 
+  max-height: 100px; 
+  animation: glow 1.5s ease infinite alternate;
+  animation: zoomOut 2s ease forwards;
+}
+@keyframes glow {
+  0% {
+    opacity: 0.5; 
+    box-shadow: 0 0 10px #ffcc00; 
+  }
+  100% {
+    opacity: 1; 
+    box-shadow: 0 0 20px #ffcc00, 0 0 30px #ffcc00, 0 0 40px #ffcc00; 
+  }
+}
+@keyframes zoomOut {
+  0% {
+    transform: scale(1); /* Start with normal size */
+  }
+  100% {
+    transform: scale(2); /* End with scaled down size (zoom out) */
+    opacity: 0; /* Optionally fade out */
+  }
+}
+
+/* CSS to hide content until loaded */
+.content {
+  display: none;
+}
+
+.loaded .content {
+  display: block;
+}
+
 /* products in dell */
 * {
   margin: 0;
@@ -116,7 +165,7 @@ body {
     background: #2c2d2d;
   } */
 #page3 {
-  height: 107vh;
+  height: 115vh;
   width: 100%;
   background-color: rgb(7, 4, 25);
   margin: 0;
@@ -173,7 +222,7 @@ input[type="radio"] {
   top: 50%;
   left: 50%;
   width: auto;
-  height: 100%;
+  height: 100rem;
   transform: translate3d(-50%, -50%, 0);
 }
 .wo-caption {
@@ -367,6 +416,86 @@ input[type="radio"] {
 #s-3:checked ~ .js-slider .js-slider_indicator .indi-3:after {
   transform: translate3d(-50%, -50%, 0) scale(2.5);
 }
+/* heading */
+/* Base styles for h2 on page 3 */
+#page3 h2 {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0; /* Initial background color */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  position: relative; /* Needed for text glow effect */
+  z-index: 1; /* Ensure text is above pseudo-element */
+}
+
+/* CSS for the hover effect */
+#page3 h2::before {
+  content: ''; /* Pseudo-element for background animation */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff; /* Initial background color */
+  z-index: -1; /* Behind the heading */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Hover effect on heading */
+#page3 h2:hover::before {
+  opacity: 1;
+}
+
+/* Text glow effect */
+#page3:hover {
+  text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00, 0 0 30px #ffcc00; /* Yellow glow effect */
+}
+
+/* Media query for screens smaller than 760px */
+@media screen and (max-width: 760px) {
+  #page3 h2 {
+    font-size: 2em;
+    padding: 15px 0;
+  }
+  .js-slider-indi{
+    content-visibility: hidden;
+  }
+}
+
+/* Media query for screens smaller than 480px */
+@media screen and (max-width: 480px) {
+  #page3 {
+    height: 60vh;
+    width: 100%;
+    background-color: rgb(7, 4, 25);
+    margin: 0;
+  }
+  .js-slider-indi{
+    content-visibility: hidden;
+  }
+  #page3 h2 {
+    font-size: 1.5em;
+    padding: 0 0;
+  }
+}
+
+/* Adding keyframes for a simple animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Applying the animation to h2 */
+#page3 h2 {
+  animation: fadeIn 1s ease-in-out;
+}
+
 
 /************************************
   ********  MEDIA QUERY     ***********
@@ -376,6 +505,14 @@ input[type="radio"] {
     Mobile devices (max-width: 480px)
   *************************************/
 @media only screen and (max-width: 480px) {
+  .c-img-w-full {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 20rem;
+    transform: translate3d(-50%, -50%, 0);
+  }
   .js-slider {
     width: 100%;
     height: 50vh;
@@ -423,6 +560,23 @@ input[type="radio"] {
   *************************************/
 
 @media only screen and (max-width: 768px) {
+  .c-img-w-full {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 20rem;
+    transform: translate3d(-50%, -50%, 0);
+  }
+  .js-slider-indi{
+    content-visibility: hidden;
+  }
+  #page3 {
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(7, 4, 25);
+    margin: 0;
+  }
   .js-slider {
     width: 90%;
     height: 60vh;
@@ -470,6 +624,8 @@ input[type="radio"] {
   *************************************/
 
 @media only screen and (min-width: 1024px) {
+  
+ 
   .js-slider {
     width: 80%;
     height: 80vh;
@@ -510,6 +666,29 @@ input[type="radio"] {
   }
   .js-slider_indicator {
     bottom: 30px;
+  }
+  .js-slider-indi{
+    content-visibility: hidden;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+  h2 {
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  .wo-h3 {
+    font-size: 18px;
+  }
+
+  .buttonslider {
+   
+    height: 70px;
+  }
+
+  .js-slider_nav_item {
+    width: 40px;
+    height: 40px;
   }
 }
 
@@ -710,12 +889,13 @@ footer {
       padding: 20px 0 0 20px;
       background-color: #333;
       color: #5f5b5b;
+      justify-content: center;
   }
 
   .footer-section {
       width: 100%;
       margin-bottom: 20px;
-      
+      justify-content: center;
   }
 
   .footer-section h3 {
@@ -759,7 +939,7 @@ footer {
   }
 
   .footer-bottom ul li a {
-      color: #fff;
+      color: #5e5959;
       text-decoration: none;
   }
 }
@@ -772,12 +952,14 @@ footer {
       align-items: center;
       padding: 10px;
       background-color: #333;
-      color: #fff;
+      color: #444141;
+      
   }
 
   .footer-section {
       width: 100%;
       margin-bottom: 15px;
+      justify-content: center;
   }
 
   .footer-section h3 {
