@@ -1115,21 +1115,21 @@ footer {
   font-size: 1.2em;
   margin-bottom: 10px;
   color: blue; /* Initial color */
-  animation: moveText 10s linear infinite, changeColor 2s linear infinite alternate;
+  /* animation: moveText 10s linear infinite, changeColor 2s linear infinite alternate; */
 }
 
 /* Define keyframes for moving the text */
-@keyframes moveText {
+/* @keyframes moveText {
   0% {
     transform: translateY(0);
   }
   100% {
     transform: translateY(10px);
   }
-}
+} */
 
 /* Define keyframes for changing color */
-@keyframes changeColor {
+/* @keyframes changeColor {
   0% {
     color: rgb(125, 214, 249);
   }
@@ -1137,7 +1137,7 @@ footer {
   100% {
     color: rgb(234, 241, 245);
   }
-}
+} */
 
 .footer-section ul {
  

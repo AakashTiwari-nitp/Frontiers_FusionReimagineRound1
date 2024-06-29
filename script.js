@@ -268,3 +268,34 @@ function videoAnimation() {
 }
 
 videoAnimation();
+
+gsap.from("footer .footer-section h3", {
+  x: -100,
+  opacity: 0,
+  delay: 0.6,
+  scrollTrigger: {
+    scroller: "#main",
+    trigger: "footer .footer-section",
+    duration: 1,
+    // markers: true,
+    start: "top 80%",
+    end: "top 60%",
+    scrub: 1,
+  },
+});
+
+gsap.from("footer .footer-section ul li", {
+  y: 100,
+  opacity: 0,
+  delay: 2.6,
+  scrollTrigger: {
+    scroller: "#main",
+    trigger: "footer .footer-section h3",
+    duration: 2,
+    // markers: true,
+    start: "top 80%",
+    end: "top 40%",
+    scrub: 2,
+  },
+  stagger: 0.2,
+});
