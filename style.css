@@ -47,6 +47,313 @@
   display: block;
 }
 
+/* FIRST PAGE */
+#page1 {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(38, 49, 49);
+}
+
+#nav1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  background-color: #fff;
+  padding: 1px 50px 1px 20px;
+}
+
+#nleft {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+/* #nleft #menu {
+  display: none;
+} */
+
+#nleft input {
+  font-size: 15px;
+  padding-left: 10px;
+  outline-color: transparent;
+  color: black;
+  width: 90%;
+  /* border: 2px solid #a9a9a9; */
+  border: none;
+}
+
+#input:placeholder-shown {
+  color: #6e6e6e;
+}
+
+#nav1 #search {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #5e5e5e;
+  color: #6e6e6e;
+  width: 40vw;
+  padding: 2px 20px 2px 2px;
+}
+
+#search i {
+  font-size: 20px;
+}
+
+#nleftimg {
+  position: relative;
+  width: 194px;
+  height: 23px;
+}
+
+#nleftimg img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 500;
+}
+#nav2 h3{
+  font-weight: 500;
+}
+
+#nright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+#nright h3 {
+  color: #636363;
+  font-size: 17px;
+}
+
+#nright h3 i {
+  font-size: 20px;
+  margin: 1px;
+}
+#nav3{
+  background-color: #fff;
+  padding: 5px;
+}
+#search2{
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #5e5e5e;
+  color: #6e6e6e;
+  width: 95vw;
+  margin: auto;
+  padding: 2px 20px 2px 2px;
+}
+#search2 i {
+  font-size: 20px;
+}
+#search2 input {
+  font-size: 15px;
+  padding-left: 10px;
+  outline-color: transparent;
+  color: black;
+  width: 90%;
+  /* border: 2px solid #a9a9a9; */
+  border: none;
+}
+#menuhover{
+  color: #fff;
+  background-color: #ffffff2a;
+  padding: 5px 10px 20px 20px;
+  position: absolute;
+  width: 250px;
+  left: -300px;
+  opacity: 0;
+}
+#menuhover h3{
+  font-weight: 500;
+  margin: 3px;
+}
+
+@media screen and (min-width: 1200px) {
+  #nav1 {
+    padding: 1px 50px 1px 20px;
+  }
+
+  #nleft {
+    gap: 50px;
+  }
+
+  #nav1 #search {
+    width: 40vw;
+  }
+
+  #nleft #menu{
+    display: none;
+  }
+  #nav2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 45px;
+    background-color: #fff;
+    padding: 1px 50px 1px 22px;
+    gap: 2vw;
+  }
+
+  #nav2 h3 {
+    display: flex;
+    align-items: center;
+  }
+
+  #nav2 h3 i {
+    font-size: 20px;
+    margin: 1px;
+  }
+  #nav3{
+    display: none;
+  }
+}
+@media (max-width:1200px) and (min-width: 1000px) {
+  #nav1 {
+    padding: 1px 50px 1px 20px;
+  }
+
+  #nleft {
+    gap: 40px;
+  }
+
+  #nav1 #search {
+    width: 30vw;
+  }
+  #nleft #menu{
+    display: none;
+  }
+
+  #nav2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 45px;
+    background-color: #fff;
+    padding: 1px 50px 1px 22px;
+    gap: 2vw;
+  }
+
+  #nav2 h3 {
+    display: flex;
+    align-items: center;
+  }
+
+  #nav2 h3 i {
+    font-size: 20px;
+    margin: 1px;
+  }
+  #nav3{
+    display: none;
+  }
+}
+@media (min-width:700px) and (max-width: 1000px) {
+  #nav1 {
+    padding: 1px 20px 1px 10px;
+  }
+
+  #nleft {
+    gap: 20px;
+  }
+
+  #nav1 #search {
+    width: 27vw;
+  }
+  #nav2 {
+    display: none;
+  }
+  #nav3{
+    display: none;
+  }
+  #nleft #menu{
+    display: block;
+  }
+  .contactUs{
+    display: none;
+  }
+  .lang{
+    display: none;
+  }
+
+  /* #page2 {
+    padding: 10%;
+  } */
+
+  /* .elem {
+    width: 90%;
+    height: 20vh;
+  }
+
+  #image {
+    width: 40%;
+  }
+
+  #ftext {
+    padding: 2vw 4vw;
+  }
+
+  #ftext button {
+    padding: 1.2vw 2.5vw;
+    font-size: 1.2vw;
+  } */
+}
+@media (min-width:480px) and (max-width: 700px) {
+  #nav1 {
+    padding: 1px 20px 1px 10px;
+  }
+
+  #nleft {
+    gap: 20px;
+  }
+
+  #nav1 #search {
+    display: none;
+  }
+  #nav2 {
+    display: none;
+  }
+  .contactUs{
+    display: none;
+  }
+  .lang{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #nav1 {
+    padding: 1px 10px 1px 5px;
+  }
+
+  #nleft {
+    gap: 10px;
+  }
+
+  #nav1 #search {
+    display: none;
+  }
+  #nav2 {
+    display: none;
+  }
+  .contactUs{
+    display: none;
+  }
+  .lang{
+    display: none;
+  }
+  .signIn{
+    display: none;
+  }
+
+  #nav2 {
+    display: none;
+  }
+}
 /* products in dell */
 * {
   margin: 0;

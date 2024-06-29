@@ -8,6 +8,30 @@ document.addEventListener("DOMContentLoaded", function() {
     content.style.display = "block";
   }, 2000); // Adjust the timeout (in milliseconds) as needed
 });
+//first page 
+function navAnimation() {
+  var menu = document.querySelector("#nleft #menu");
+
+menu.addEventListener("mouseover", function(e) {
+  console.log("menu");
+  gsap.to("#menuhover",{
+    x: 300,
+    opacity:1,
+    duration: 2,
+  })
+})
+menu.addEventListener("mouseleave", function(e) {
+  console.log("menu");
+  gsap.to("#menuhover",{
+    x:-500,
+    opacity:0,
+    duration: 2,
+    delay:0.1,
+
+  })
+})
+}
+navAnimation();
 
 // This is a function to add locomaotive JS for Scrolling
 
