@@ -88,17 +88,19 @@
 /* menu */
 .menu {
   background: #111253;
-  height: 4rem;
+  height: 3rem;
+  padding-left: 2vw;
 }
 .menu ol {
   list-style-type: none;
-  margin: 0 auto;
+  margin: 0 0;
   padding: 0;
 }
 .menu > ol {
   max-width: 1000px;
   padding: 0 2rem;
   display: flex;
+  justify-content: flex-start;
 }
 .menu > ol > .menu-item {
   flex: 1;
@@ -122,8 +124,11 @@
 }
 .menu-item {
   position: relative;
-  line-height: 2.5rem;
+  line-height: 1.5rem;
   text-align: center;
+}
+.menu > ol > .menu-item:nth-child(1){
+  padding: auto 1rem;
 }
 .menu-item a {
   overflow: hidden;
@@ -132,6 +137,7 @@
   display: block;
   color: #FFF;
 }
+
 .sub-menu .menu-item {
   padding: 0.75rem 0;
   background: #2c0a71;
