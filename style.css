@@ -94,7 +94,7 @@ body {
 #page1 {
   height: 100vh;
   width: 100%;
-  background-color: rgb(38, 49, 49);
+  background-color: #111;
 }
 /* nav2 */
 .menu {
@@ -198,7 +198,7 @@ body {
   font-size: 16px;
   font-family: "Fira Mono", monospace;
   margin: 0;
-  background: #2a363b;
+  background: #111;
 }
 
 * {
@@ -338,7 +338,7 @@ a {
 }
 #menuhover{
   color: #fff;
-  background-color: #152a6d6c;
+  background-color: #3a3a3aa8;
   padding: 5px 10px 20px 20px;
   position: absolute;
   width: 250px;
@@ -543,12 +543,54 @@ a {
   height: 85%;
   object-fit: cover;
 }
+#overlay{
+  height: 52%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  /* background-color: red; */
+  padding: 3vw;
+  /* background-color: rgba(0, 0, 0, 0.154);
+  backdrop-filter: blur(4px); */
+}
+#over1, #over2{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+#over1{
+  margin-bottom: 2vw;
+}
+#over1 h1{
+  font-size: 3.5vw;
+  font-family: 'Helvetica Neue';
+  font-weight: 300;
+  /* mix-blend-mode: difference; */
+}
+#over1 h2{
+  font-size: 1vw;
+  padding: 2vw 2.2vw;
+  /* background-color: blue; */
+  border-radius: 50%;
+  border: 1px solid #fff;
+  mix-blend-mode: difference;
+  /* border-bottom: 3px solid #fff; */
+}
+#over2{
+  border-top: 2px solid white;
+  padding: 1.5vw 0;
+}
+#over2 h2{
+  font-size: 1.3vw;
+  font-weight: 500;
+}
 
 /* Page 2 Accesories Section */
 #page2 {
   min-height: 100vh;
   width: 100%;
-  background-color: aqua;
+  background-color: #111;
   background-image: url("./content/background.jpg");
   object-fit: cover;
   padding: 5%;
@@ -642,7 +684,7 @@ a {
 #page3 {
   height: 115vh;
   width: 100%;
-  background-color: rgb(7, 4, 25);
+  background-color: #111;
   margin: 0;
 }
 #statuslap {
@@ -898,7 +940,8 @@ input[type="radio"] {
   font-size: 24px;
   text-align: center;
   padding: 20px;
-  background-color: #f0f0f0; /* Initial background color */
+  background-color: #111;
+  color: #fff; /* Initial background color */
   transition: background-color 0.3s ease; /* Smooth transition for background color */
   position: relative; /* Needed for text glow effect */
   z-index: 1; /* Ensure text is above pseudo-element */
@@ -944,7 +987,7 @@ input[type="radio"] {
   #page3 {
     height: 60vh;
     width: 100%;
-    background-color: rgb(7, 4, 25);
+    background-color: #111;
     margin: 0;
   }
   .js-slider-indi {
@@ -1048,7 +1091,7 @@ input[type="radio"] {
   #page3 {
     height: 100vh;
     width: 100%;
-    background-color: rgb(7, 4, 25);
+    background-color: #111;
     margin: 0;
   }
   .js-slider {
@@ -1168,7 +1211,7 @@ input[type="radio"] {
   margin: 5vh 0;
   height: 45vw;
   width: 100%;
-  background-color: aqua;
+  background-color: #111;
 }
 #future {
   display: flex;
@@ -1178,7 +1221,7 @@ input[type="radio"] {
   /* margin-top: 1vw; */
   position: absolute;
   overflow: hidden;
-  background-color: #111;
+  background-color: #2d2b2b;
   height: 45vw;
   width: 100%;
 }
@@ -1254,8 +1297,7 @@ input[type="radio"] {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   letter-spacing: 1.4px;
-
-  background: linear-gradient(to right, #00071c 0%, #00071c 100%);
+  background: #111;
   font-size: 12px;
 }
 #page5 button,
@@ -1490,8 +1532,7 @@ input {
   align-items: center;
   justify-content: center;
   height: 20vh;
-
-  background: #00071c;
+  background: #111115;
 }
 
 #page5 ul {
