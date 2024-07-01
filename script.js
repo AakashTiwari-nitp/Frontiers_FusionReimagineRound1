@@ -12,18 +12,18 @@ document.addEventListener("DOMContentLoaded", function () {
 function navAnimation() {
   var menu = document.querySelector("#nleft #menu");
 
-  menu.addEventListener("mouseover", function (e) {
+  menu.addEventListener("mousedown", function (e) {
     console.log("menu");
     gsap.to("#menuhover", {
       x: 300,
       opacity: 1,
-      duration: 2,
+      duration: 0.5,
     });
   });
   menu.addEventListener("mouseleave", function (e) {
     console.log("menu");
     gsap.to("#menuhover", {
-      x: -500,
+      x: -300,
       opacity: 0,
       duration: 2,
       delay: 0.1,
@@ -284,7 +284,7 @@ function footerAnimation() {
       scrub: 1,
     },
   });
-  
+
   gsap.from("footer .footer-section ul li", {
     y: 100,
     opacity: 0,
