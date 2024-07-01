@@ -29,6 +29,17 @@
   font-weight: normal;
   font-style: normal;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: PP Woodland;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
 
 /* CSS for Preloader */
 .preloader {
@@ -510,26 +521,27 @@ a {
     display: block;
   }
 }
-/* products in dell */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: PP Woodland;
-}
-html,
-body {
-  height: 100%;
-  width: 100%;
-}
+
+
+
 /* #main{
     height: 100%;
     width: 100%;
 } */
-#page1 {
+/* Hero Section */
+#hero{
+  position: relative;
   height: 100vh;
-  width: 100%;
-  background-color: aqua;
+  width: 100vw;
+}
+#hero img{
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -45%);
+  width: 70%;
+  height: 85%;
+  object-fit: cover;
 }
 
 /* Page 2 Accesories Section */
