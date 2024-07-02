@@ -92,7 +92,8 @@ body {
 
 /* FIRST PAGE */
 #page1 {
-  height: 100vh;
+  margin-bottom: 2vw;
+  height: 55vw;
   width: 100%;
   background-color: #111;
 }
@@ -531,27 +532,44 @@ a {
 /* Hero Section */
 #hero{
   position: relative;
-  height: 100vh;
+  height: 53vw;
   width: 100vw;
 }
-#hero img{
+#hero-img{
   position: absolute;
   left: 50%;
-  top: 40%;
+  top: 40vh;
   transform: translate(-50%, -45%);
-  width: 70%;
-  height: 85%;
+  width: 70vw;
+  height: 50vw;
+}
+#hero-img img{
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 #overlay{
-  height: 52%;
+  height: 55vw;
   width: 100%;
-  position: absolute;
+  position: relative;
+  display: flex;
+  flex-direction: column;
   bottom: 0;
   /* background-color: red; */
   padding: 3vw;
   /* background-color: rgba(0, 0, 0, 0.154);
   backdrop-filter: blur(4px); */
+}
+#f1{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+}
+#over{
+  width: 90%;
+  position: absolute;
+  bottom: 12%;
 }
 #over1, #over2{
   display: flex;
@@ -588,10 +606,11 @@ a {
 
 /* Page 2 Accesories Section */
 #page2 {
+  margin-top: 2vw;
   min-height: 100vh;
   width: 100%;
-  background-color: #111;
-  background-image: url("./content/background.jpg");
+  background-color: #222;
+  /* background-image: url("./content/background.jpg"); */
   object-fit: cover;
   padding: 5%;
   display: flex;
@@ -730,8 +749,8 @@ input[type="radio"] {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%;
-  height: auto;
+  width: 75%;
+  height: 100%;
   transform: translate3d(-50%, -50%, 0);
 }
 .c-img-h-full {
